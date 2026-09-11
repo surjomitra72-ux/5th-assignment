@@ -3,7 +3,7 @@ import Logo2 from "../assets/banner-stack.png";
 const Banner = () => {
   return (
     <div
-      className="max-w-7xl mx-auto px-4 sm:px lg:px-20 py-12 
+      className="max-w-7xl mx-auto px-4 sm:px lg:px-18 py-12 
       sm:py-16 lg:py-22 flex flex-col md:flex-row items-center justify-between gap-10">
       <div className="w-full md:w-1/2 max-w-xl">
         <h1 className="text-4xl sm:text-5xl font-bold leading-tight">

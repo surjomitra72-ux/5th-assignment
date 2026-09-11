@@ -1,4 +1,4 @@
-export interface TechnologyCard {
+export interface Icard {
   id: string;
   name: string;
   category: string
