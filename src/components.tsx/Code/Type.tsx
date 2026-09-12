@@ -1,10 +1,11 @@
 export interface Icard {
   id: string;
   name: string;
-  category: string
+  category: string;
   description: string;
   icon: string;
   rating: number;
-  difficulty: string
+  difficulty: string;
   badge: string;
+  color: string;
 }

@@ -4,16 +4,24 @@ import AvailableCards from "./AvailableCards";
 
 interface CardsProps {
   CardsPromise: Promise<Icard[]>;
+  selectedCards: Icard[];
+  setSelectedCards: React.Dispatch<React.SetStateAction<Icard[]>>;
 }
 
-const Cards = ({ CardsPromise }: CardsProps) => {
+const Cards = ({
+  CardsPromise,
+  selectedCards,
+  setSelectedCards,
+}: CardsProps) => {
   const cards = use(CardsPromise);
-
-  console.log(cards);
 
   return (
     <div>
-      <AvailableCards Cards={cards} />
+      <AvailableCards
+        Cards={cards}
+        selectedCards={selectedCards}
+        setSelectedCards={setSelectedCards}
+      />
     </div>
   );
 };
