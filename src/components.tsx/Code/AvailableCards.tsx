@@ -1,9 +1,11 @@
+import { toast, Bounce } from "react-toastify";
+import type { Dispatch, SetStateAction } from "react";
 import type { Icard } from "./Type";
 
 interface AvailableCardsProps {
   Cards: Icard[];
   selectedCards: Icard[];
-  setSelectedCards: React.Dispatch<React.SetStateAction<Icard[]>>;
+  setSelectedCards: Dispatch<SetStateAction<Icard[]>>;
 }
 
 const badgeColors: Record<string, string> = {
@@ -28,69 +30,102 @@ const AvailableCards = ({
           key={card.id}
           className="rounded-xl border border-gray-100 bg-white p-3 shadow-sm flex flex-col justify-between hover:shadow-md transition-all"
         >
-          <div>
-            <div className="flex justify-between items-start">
-              <img
-                src={card.icon}
-                alt={card.name}
-                className="w-7 h-7 object-contain"
-              />
+          {/* Icon + Badge */}
+          <div className="flex justify-between items-start">
+            <img
+              src={card.icon}
+              alt={card.name}
+              className="w-7 h-7 object-contain"
+            />
 
-              <span
-                className={`px-2 py-1 rounded-full text-[8px] font-medium ${
-                  badgeColors[card.color] || "bg-gray-50 text-gray-500"
-                }`}
-              >
-                {card.badge}
-              </span>
-            </div>
-
-            <h3 className="text-sm font-bold text-slate-800 mt-3">
-              {card.name}
-            </h3>
-
-            <p className="text-[9px] text-slate-400 mt-1 leading-relaxed min-h-[32px]">
-              {card.description}
-            </p>
+            <span
+              className={`px-2 py-1 rounded-full text-[8px] font-medium ${
+                badgeColors[card.color] ||
+                "bg-gray-50 text-gray-500"
+              }`}
+            >
+              {card.badge}
+            </span>
           </div>
 
-          <div>
-            <div className="flex items-center gap-1 mt-3 text-[8px]">
-              <span className="bg-slate-100 text-slate-600 px-2 py-1 rounded font-medium">
-                {card.category}
-              </span>
+          {/* Name */}
+          <h3 className="text-sm font-bold text-slate-800 mt-3">
+            {card.name}
+          </h3>
 
-              <span className="text-slate-400">{card.difficulty}</span>
+          {/* Description */}
+          <p className="text-[9px] text-slate-400 mt-1 leading-relaxed min-h-[32px]">
+            {card.description}
+          </p>
 
-              <span className="ml-auto flex items-center gap-1 font-semibold text-slate-700">
-                <span className="text-amber-400">★</span>
-                {card.rating}
-              </span>
-            </div>
+          {/* Category + Difficulty + Rating */}
+          <div className="flex items-center gap-1 mt-3 text-[8px]">
+            <span className="bg-slate-100 text-slate-600 px-2 py-1 rounded font-medium">
+              {card.category}
+            </span>
 
-            <button
-              onClick={(e) => {
-                const button = e.currentTarget;
+            <span className="text-slate-400">
+              {card.difficulty}
+            </span>
 
-                button.classList.add("scale-90");
+            <span className="ml-auto flex items-center gap-1 font-semibold text-slate-700">
+              <span className="text-amber-400">★</span>
+              {card.rating}
+            </span>
+          </div>
 
-                setTimeout(() => {
-                  button.classList.remove("scale-90");
-                }, 150);
+          {/* Add to Stack Button */}
+          <button
+            onClick={(e) => {
+              const alreadySelected = selectedCards.some(
+                (selectedCard) => selectedCard.id === card.id
+              );
 
-                const alreadySelected = selectedCards.some(
-                  (selectedCard) => selectedCard.id === card.id,
+              if (alreadySelected) {
+                toast.warn(
+                  `${card.name} is already in your stack!`,
+                  {
+                    position: "bottom-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    theme: "light",
+                    transition: Bounce,
+                  }
                 );
 
-                if (!alreadySelected) {
-                  setSelectedCards([...selectedCards, card]);
+                return;
+              }
+
+              e.currentTarget.classList.add("scale-90");
+
+              setTimeout(() => {
+                e.currentTarget.classList.remove("scale-90");
+              }, 150);
+
+              setSelectedCards([...selectedCards, card]);
+
+              toast.success(
+                `${card.name} added to your stack!`,
+                {
+                  position: "bottom-right",
+                  autoClose: 2000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  theme: "light",
+                  transition: Bounce,
                 }
-              }}
-              className="w-full bg-[#080C14] hover:bg-slate-800 text-white text-[9px] font-semibold py-2 rounded-md mt-3 transition-transform duration-150"
-            >
-              Add to Stack
-            </button>
-          </div>
+              );
+            }}
+            className="w-full bg-[#080C14] hover:bg-slate-800
+             text-white text-[9px] font-semibold py-2 rounded-md mt-3 transition-transform duration-150"
+          >
+            Add to Stack
+          </button>
         </div>
       ))}
     </div>
