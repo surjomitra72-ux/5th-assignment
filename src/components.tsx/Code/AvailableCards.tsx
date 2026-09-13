@@ -9,13 +9,12 @@ interface AvailableCardsProps {
 }
 
 const badgeColors: Record<string, string> = {
-  blue: "bg-blue-50 text-blue-500",
-  green: "bg-green-50 text-green-500",
-  orange: "bg-orange-50 text-orange-500",
-  purple: "bg-purple-50 text-purple-500",
-  cyan: "bg-cyan-50 text-cyan-500",
-  red: "bg-red-50 text-red-500",
-  yellow: "bg-yellow-50 text-yellow-600",
+  Popular: "bg-blue-50 text-blue-500",
+  Fast: "bg-orange-50 text-orange-500",
+  Essential: "bg-cyan-50 text-cyan-500",
+  Reliable: "bg-red-50 text-red-500",
+  "Top SQL": "bg-purple-50 text-purple-500",
+  Containers: "bg-indigo-50 text-indigo-500",
 };
 
 const AvailableCards = ({
@@ -40,8 +39,7 @@ const AvailableCards = ({
 
             <span
               className={`px-2 py-1 rounded-full text-[8px] font-medium ${
-                badgeColors[card.color] ||
-                "bg-gray-50 text-gray-500"
+                badgeColors[card.badge] || "bg-gray-50 text-gray-500"
               }`}
             >
               {card.badge}
@@ -49,9 +47,7 @@ const AvailableCards = ({
           </div>
 
           {/* Name */}
-          <h3 className="text-sm font-bold text-slate-800 mt-3">
-            {card.name}
-          </h3>
+          <h3 className="text-sm font-bold text-slate-800 mt-3">{card.name}</h3>
 
           {/* Description */}
           <p className="text-[9px] text-slate-400 mt-1 leading-relaxed min-h-[32px]">
@@ -64,9 +60,7 @@ const AvailableCards = ({
               {card.category}
             </span>
 
-            <span className="text-slate-400">
-              {card.difficulty}
-            </span>
+            <span className="text-slate-600">{card.difficulty}</span>
 
             <span className="ml-auto flex items-center gap-1 font-semibold text-slate-700">
               <span className="text-amber-400">★</span>
@@ -74,57 +68,36 @@ const AvailableCards = ({
             </span>
           </div>
 
-          {/* Add to Stack Button */}
+          {/* Add to Stack */}
           <button
+            disabled={selectedCards.some(
+              (selectedCard) => selectedCard.id === card.id,
+            )}
             onClick={(e) => {
-              const alreadySelected = selectedCards.some(
-                (selectedCard) => selectedCard.id === card.id
-              );
-
-              if (alreadySelected) {
-                toast.warn(
-                  `${card.name} is already in your stack!`,
-                  {
-                    position: "bottom-right",
-                    autoClose: 3000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    theme: "light",
-                    transition: Bounce,
-                  }
-                );
-
-                return;
-              }
-
               e.currentTarget.classList.add("scale-90");
 
               setTimeout(() => {
                 e.currentTarget.classList.remove("scale-90");
               }, 150);
 
-              setSelectedCards([...selectedCards, card]);
+              setSelectedCards((prev) => [...prev, card]);
 
-              toast.success(
-                `${card.name} added to your stack!`,
-                {
-                  position: "bottom-right",
-                  autoClose: 2000,
-                  hideProgressBar: false,
-                  closeOnClick: true,
-                  pauseOnHover: true,
-                  draggable: true,
-                  theme: "light",
-                  transition: Bounce,
-                }
-              );
+              toast.success(`${card.name} added to your stack!`, {
+                position: "bottom-right",
+                autoClose: 2000,
+                theme: "light",
+                transition: Bounce,
+              });
             }}
-            className="w-full bg-[#080C14] hover:bg-slate-800
-             text-white text-[9px] font-semibold py-2 rounded-md mt-3 transition-transform duration-150"
+            className={`w-full text-white text-[9px] font-semibold py-2 rounded-md mt-3 transition-all ${
+              selectedCards.some((selectedCard) => selectedCard.id === card.id)
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-[#080C14] hover:bg-slate-800"
+            }`}
           >
-            Add to Stack
+            {selectedCards.some((selectedCard) => selectedCard.id === card.id)
+              ? "Added to Stack"
+              : "Add to Stack"}
           </button>
         </div>
       ))}

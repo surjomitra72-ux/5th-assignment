@@ -7,8 +7,7 @@
     "icon": "https://icon.icepanel.io/Technology/svg/React.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Popular",
-    "color": "blue"
+    "badge": "Popular"
   },
   {
     "id": "nextjs",
@@ -18,8 +17,7 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Fast",
-    "color": "orange"
+    "badge": "Fast"
   },
   {
     "id": "typescript",
@@ -29,8 +27,7 @@
     "icon": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Essential",
-    "color": "cyan"
+    "badge": "Essential"
   },
   {
     "id": "javascript",
@@ -40,8 +37,7 @@
     "icon": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Essential",
-    "color": "cyan"
+    "badge": "Essential"
   },
   {
     "id": "nodejs",
@@ -51,8 +47,7 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Node.js.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Popular",
-    "color": "purple"
+    "badge": "Popular"
   },
   {
     "id": "express",
@@ -62,8 +57,7 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Express.svg",
     "rating": 4.7,
     "difficulty": "Beginner-Friendly",
-    "badge": "Fast",
-    "color": "orange"
+    "badge": "Fast"
   },
   {
     "id": "mongodb",
@@ -73,8 +67,7 @@
     "icon": "https://icon.icepanel.io/Technology/svg/MongoDB.svg",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
-    "badge": "Popular",
-    "color": "green"
+    "badge": "Popular"
   },
   {
     "id": "postgresql",
@@ -84,8 +77,7 @@
     "icon": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Top SQL",
-    "color": "blue"
+    "badge": "Top SQL"
   },
   {
     "id": "mysql",
@@ -95,7 +87,66 @@
     "icon": "https://icon.icepanel.io/Technology/svg/MySQL.svg",
     "rating": 4.7,
     "difficulty": "Beginner-Friendly",
-    "badge": "Reliable",
-    "color": "green"
+    "badge": "Reliable"
+  },
+  {
+    "id": "tailwindcss",
+    "name": "Tailwind CSS",
+    "category": "Styling",
+    "description": "A utility-first CSS framework for rapidly building modern and responsive user interfaces.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+    "rating": 4.8,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Fast"
+  },
+  {
+    "id": "docker",
+    "name": "Docker",
+    "category": "DevOps",
+    "description": "A platform for packaging applications and their dependencies into portable and consistent containers.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Docker.svg",
+    "rating": 4.8,
+    "difficulty": "Intermediate",
+    "badge": "Containers"
+  },
+  {
+    "id": "git",
+    "name": "Git",
+    "category": "Tools",
+    "description": "A distributed version control system used to track code changes and collaborate with development teams.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Git.svg",
+    "rating": 4.9,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Essential"
+  },
+  {
+    "id": "vite",
+    "name": "Vite",
+    "category": "Tools",
+    "description": "A fast modern build tool that provides an excellent development experience for frontend applications.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Vite.js.svg",
+    "rating": 4.8,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Fast"
+  },
+  {
+    "id": "python",
+    "name": "Python",
+    "category": "Language",
+    "description": "A high-level programming language widely used for web development, automation, data science, and AI.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Python.svg",
+    "rating": 4.9,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Popular"
+  },
+  {
+    "id": "github",
+    "name": "GitHub",
+    "category": "Tools",
+    "description": "A developer platform for hosting Git repositories, collaborating on code, and managing software projects.",
+    "icon": "https://icon.icepanel.io/Technology/svg/GitHub.svg",
+    "rating": 4.9,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Essential"
   }
 ]
