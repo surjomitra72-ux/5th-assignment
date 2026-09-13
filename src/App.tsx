@@ -9,6 +9,7 @@ import YourStack from "./components.tsx/Code/YourStack";
 
 import { Suspense, useState } from "react";
 import type { Icard } from "./components.tsx/Code/Type";
+import Footer from "./components.tsx/Code/Footer";
 
 const CardsFetch = async (): Promise<Icard[]> => {
   const res = await fetch("/data.json");
@@ -34,7 +35,6 @@ function App() {
         <Suspense fallback={<h2>Loading...</h2>}>
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
-              
               {/* Available Cards */}
               <div className="lg:col-span-3">
                 <Cards
@@ -51,10 +51,13 @@ function App() {
                   setSelectedCards={setSelectedCards}
                 />
               </div>
-
             </div>
           </div>
         </Suspense>
+
+
+        <Footer />
+
       </main>
     </>
   );
