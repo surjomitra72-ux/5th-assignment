@@ -8,7 +8,6 @@ const Nav = () => {
         {/* ================= MOBILE NAVBAR ================= */}
         <div className="flex items-center justify-between h-12 md:hidden">
 
-          {/* Hamburger */}
           <button
             className="text-gray-600 text-xl"
             aria-label="Open menu"
@@ -16,14 +15,12 @@ const Nav = () => {
             ☰
           </button>
 
-          {/* Logo */}
           <img
             src={Logo3}
             alt="DevStack"
             className="w-20 h-auto"
           />
 
-          {/* Auth Buttons */}
           <div className="flex items-center gap-2">
 
             <button className="text-[10px] text-gray-700">
@@ -41,14 +38,14 @@ const Nav = () => {
         {/* ================= DESKTOP NAVBAR ================= */}
         <div className="hidden md:flex items-center justify-between h-16">
 
-          {/* Logo */}
+
           <img
             src={Logo3}
             alt="DevStack"
             className="w-28 h-auto"
           />
 
-          {/* Menu */}
+
           <div className="flex items-center gap-8">
 
             <a
@@ -88,7 +85,7 @@ const Nav = () => {
 
           </div>
 
-          {/* Auth Buttons */}
+
           <div className="flex items-center gap-3">
 
             <button className="text-sm text-gray-700 hover:text-pink-500 transition">

@@ -4,9 +4,8 @@ const Footer = () => {
   return (
     <footer className="border-t border-gray-100 bg-white">
       <div className="max-w-7xl mx-auto px-8 py-25">
-        {/* Main Footer */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Brand */}
+
           <div>
             <img src={Logo3} alt="Dev Stack" className="w-32 h-auto" />
 
@@ -39,7 +38,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Product */}
           <div>
             <h3 className="text-[9px] font-bold text-slate-800 uppercase">
               Product
@@ -52,7 +50,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Company */}
           <div>
             <h3 className="text-[9px] font-bold text-slate-800 uppercase">
               Company
@@ -65,7 +62,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Legal */}
           <div>
             <h3 className="text-[9px] font-bold text-slate-800 uppercase">
               Legal
@@ -78,7 +74,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Border */}
+
         <div className="border-t border-gray-100 mt-8 pt-5 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-[8px] text-slate-400">
             © 2026 Dev Stack. All rights reserved.

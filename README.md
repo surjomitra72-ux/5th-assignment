@@ -4,12 +4,14 @@ DevStack is a modern and responsive web application that helps developers explor
 
 ## 🛠️ Technologies Used
 
-- React
+- React.js
 - TypeScript
-- Vite
 - Tailwind CSS
 - DaisyUI
-- React Toastify
+- React-Toastify
+- JSON
+- Vite
+- React Icons
 
 ## ✨ Features
 

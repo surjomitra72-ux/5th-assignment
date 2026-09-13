@@ -7,5 +7,4 @@ export interface Icard {
   rating: number;
   difficulty: string;
   badge: string;
-  color: string;
 }

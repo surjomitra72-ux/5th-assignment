@@ -35,7 +35,7 @@ function App() {
         <Suspense fallback={<h2>Loading...</h2>}>
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
-              {/* Available Cards */}
+
               <div className="lg:col-span-3">
                 <Cards
                   CardsPromise={CardsPromise}
@@ -44,7 +44,7 @@ function App() {
                 />
               </div>
 
-              {/* Your Stack */}
+
               <div className="lg:col-span-1">
                 <YourStack
                   selectedCards={selectedCards}
