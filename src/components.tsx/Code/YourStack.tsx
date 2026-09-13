@@ -69,7 +69,7 @@ const YourStack = ({
       {/* Selected Cards */}
       {selectedCards.length === 0 ? (
         <p className="text-center text-xs text-slate-400 py-8">
-          No technology selected yet.
+          Your Stack is empty.
         </p>
       ) : (
         <div className="mt-4 space-y-2">
