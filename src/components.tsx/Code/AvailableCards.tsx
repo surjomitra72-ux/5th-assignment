@@ -36,7 +36,7 @@ const AvailableCards = ({
               isSelected ? "border-pink-500" : "border-gray-100"
             }`}
           >
-            {/* Icon & Badge */}
+
             <div className="flex justify-between items-start">
               <img
                 src={card.icon}
@@ -53,18 +53,18 @@ const AvailableCards = ({
               </span>
             </div>
 
-            {/* Card Name */}
+
             <h3 className="text-sm font-bold text-slate-800 mt-3">
               {card.name}
             </h3>
 
-            {/* Description */}
-            <p className="text-[9px] text-slate-400 mt-1 leading-relaxed min-h-[32px]">
+       
+            <p className="text-[11px] text-slate-400 mt-2 leading-5 min-h-[60px]">
               {card.description}
             </p>
 
-            {/* Category, Difficulty & Rating */}
-            <div className="flex items-center mt-3 text-[8px]">
+       
+            <div className="flex items-center mt-3 text-[10px]">
               <span className="bg-slate-100 text-slate-600 px-2 py-1 rounded font-medium">
                 {card.category}
               </span>
@@ -79,7 +79,7 @@ const AvailableCards = ({
               </span>
             </div>
 
-            {/* Add to Stack Button */}
+      
             <button
               disabled={isSelected}
               onClick={(e) => {

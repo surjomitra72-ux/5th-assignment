@@ -78,7 +78,11 @@ I used it to show an empty stack message when no technology has been selected:
 
 
 {selectedCards.length === 0 ? (
-  <p>Your stack is empty.</p>
+  <p>Your Stack is empty.</p>
 ) : (
-  // Selected technology cards
+  <div>
+    {selectedCards.map((card) => (
+      // cards
+    ))}
+  </div>
 )}
