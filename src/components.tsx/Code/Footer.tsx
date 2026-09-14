@@ -2,7 +2,7 @@ import Logo3 from "../../assets/logo-text.png";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-gray-100 bg-white">
+    <footer className="border-t border-gray-100 bg-white mt-15">
       <div className="max-w-7xl mx-auto px-8 py-25">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
@@ -80,7 +80,7 @@ const Footer = () => {
             © 2026 Dev Stack. All rights reserved.
           </p>
 
-          <div className="flex gap-5 text-[8px] text-slate-400">
+          <div className="flex gap-5 text-[8px] text-slate-400 px-15">
             <span>Privacy</span>
             <span>Terms</span>
           </div>

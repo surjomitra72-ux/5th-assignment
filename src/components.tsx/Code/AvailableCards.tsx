@@ -23,7 +23,7 @@ const AvailableCards = ({
   setSelectedCards,
 }: AvailableCardsProps) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 px-4">
       {Cards.map((card) => {
         const isSelected = selectedCards.some(
           (selectedCard) => selectedCard.id === card.id,
@@ -32,7 +32,8 @@ const AvailableCards = ({
         return (
           <div
             key={card.id}
-            className={`rounded-xl border bg-white p-3 shadow-sm flex flex-col justify-between hover:shadow-md transition-all ${
+            className={`rounded-xl border bg-white p-3 shadow-sm flex flex-col justify-between 
+              hover:shadow-md transition-all ${
               isSelected ? "border-pink-500" : "border-gray-100"
             }`}
           >
