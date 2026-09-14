@@ -5,7 +5,6 @@ const Footer = () => {
     <footer className="border-t border-gray-100 bg-white mt-15">
       <div className="max-w-7xl mx-auto px-8 py-25">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
           <div>
             <img src={Logo3} alt="Dev Stack" className="w-32 h-auto" />
 
@@ -74,8 +73,10 @@ const Footer = () => {
           </div>
         </div>
 
-
-        <div className="border-t border-gray-100 mt-8 pt-5 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <div
+          className="border-t border-gray-100 mt-8 pt-5 flex flex-col 
+        sm:flex-row justify-between items-center gap-3"
+        >
           <p className="text-[8px] text-slate-400">
             © 2026 Dev Stack. All rights reserved.
           </p>
